@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arman Khan – Computer Science Engineering Student | Developer | Cybersecurity Enthusiast. Portfolio showcasing projects, skills, and achievements." />
+  <title>Arman Khan | Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"         class="nav-link active">Home</a></li>
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#skills"       class="nav-link">Skills</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#education"    class="nav-link">Education</a></li>
+        <li><a href="#contact"      class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-up">
+        <div class="hero-greeting">
+          <span class="wave">👋</span> Hello, World!
+        </div>
+        <h1 class="hero-name">
+          I'm <span class="gradient-text">Arman Khan</span>
+        </h1>
+        <div class="hero-roles">
+          <span class="role-prefix">I'm a&nbsp;</span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-description">
+          Passionate CSE student crafting clean code and exploring the depths of cybersecurity.
+          Building tomorrow's solutions — one commit at a time.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+          <a href="#" class="btn btn-outline" id="downloadBtn" download>
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/akhan896/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/arman-khan3/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:armankhan02423@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="avatar-container">
+          <div class="avatar-ring ring-1"></div>
+          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-ring ring-3"></div>
+          <div class="avatar-core">
+            <span class="avatar-initials">AK</span>
+          </div>
+          <!-- Floating tags -->
+          <div class="float-tag tag-python"><i class="fab fa-python"></i> Python</div>
+          <div class="float-tag tag-cyber"><i class="fas fa-shield-halved"></i> Cybersec</div>
+          <div class="float-tag tag-ai"><i class="fas fa-brain"></i> AI/ML</div>
+          <div class="float-tag tag-linux"><i class="fab fa-linux"></i> Linux</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// about me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card" data-aos="fade-right">
+          <div class="about-code">
+            <div class="code-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="code-title">about_me.py</span>
+            </div>
+            <pre class="code-block"><code><span class="code-keyword">class</span> <span class="code-class">ArmanKhan</span>:
+  <span class="code-keyword">def</span> <span class="code-fn">__init__</span>(self):
+    self.name   = <span class="code-str">"Arman Khan"</span>
+    self.role   = <span class="code-str">"CSE Student"</span>
+    self.focus  = [
+      <span class="code-str">"Cybersecurity"</span>,
+      <span class="code-str">"Development"</span>,
+      <span class="code-str">"AI / ML"</span>
+    ]
+    self.love   = <span class="code-str">"Problem Solving"</span>
+
+  <span class="code-keyword">def</span> <span class="code-fn">say_hello</span>(self):
+    <span class="code-keyword">return</span> <span class="code-str">"Let's build something!"</span></code></pre>
+          </div>
+        </div>
+        <div class="about-info" data-aos="fade-left">
+          <h3 class="about-heading">A Little About Me</h3>
+          <p class="about-text">
+            I'm <strong>Arman Khan</strong>, a Computer Science Engineering student at Lovely Professional University
+            with a deep passion for <strong>cybersecurity</strong>, full‑stack development, and exploring AI/ML frontiers.
+          </p>
+          <p class="about-text">
+            I enjoy building software that solves real problems — from AI chatbots to memory visualizers.
+            Outside of code, I compete in competitive programming and hackathons, always chasing the next challenge.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">Top 10</span>
+              <span class="stat-label">Hackathon</span>
+            </div>
+          </div>
+          <div class="about-contact-row">
+            <a href="mailto:armankhan02423@gmail.com" class="about-contact-item">
+              <i class="fas fa-envelope"></i> armankhan02423@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/arman-khan3/" target="_blank" rel="noopener noreferrer" class="about-contact-item">
+              <i class="fab fa-linkedin"></i> linkedin.com/in/arman-khan3
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// skills</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+
+      <div class="skills-categories">
+        <!-- Languages -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="skill-cat-title"><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-pills">
+            <div class="skill-pill"><i class="fas fa-plus-square code-icon"></i> C++</div>
+            <div class="skill-pill"><i class="fab fa-java"></i> Java</div>
+            <div class="skill-pill"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-pill"><i class="fas fa-c"></i> C</div>
+          </div>
+        </div>
+        <!-- Frameworks -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="skill-cat-title"><i class="fas fa-layer-group"></i> Frameworks & Web</h3>
+          <div class="skill-pills">
+            <div class="skill-pill"><i class="fab fa-html5"></i> HTML</div>
+            <div class="skill-pill"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="skill-pill"><i class="fas fa-flask"></i> Flask</div>
+          </div>
+        </div>
+        <!-- Tools -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="skill-cat-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
+          <div class="skill-pills">
+            <div class="skill-pill"><i class="fas fa-network-wired"></i> Nmap</div>
+            <div class="skill-pill"><i class="fas fa-fish"></i> Wireshark</div>
+            <div class="skill-pill"><i class="fab fa-linux"></i> Linux</div>
+            <div class="skill-pill"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill-pill"><i class="fab fa-github"></i> GitHub</div>
+            <div class="skill-pill"><i class="fas fa-satellite-dish"></i> Shodan</div>
+          </div>
+        </div>
+        <!-- Soft Skills -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="skill-cat-title"><i class="fas fa-brain"></i> Soft Skills</h3>
+          <div class="skill-pills">
+            <div class="skill-pill"><i class="fas fa-puzzle-piece"></i> Problem Solving</div>
+            <div class="skill-pill"><i class="fas fa-users"></i> Team Player</div>
+            <div class="skill-pill"><i class="fas fa-sync-alt"></i> Adaptability</div>
+            <div class="skill-pill"><i class="fas fa-tasks"></i> Project Management</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill bars -->
+      <div class="skill-bars" data-aos="fade-up">
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Python</span><span class="skill-bar-pct">80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>C++</span><span class="skill-bar-pct">75%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Java</span><span class="skill-bar-pct">65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>HTML / CSS</span><span class="skill-bar-pct">85%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Cybersecurity Tools</span><span class="skill-bar-pct">70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-robot"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/akhan896/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-link" aria-label="Live demo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">BOLT – AI Chatbot</h3>
+          <p class="project-desc">
+            A fully‑functional AI chatbot built with Python Flask and powered by the Gemini API.
+            Features clean backend REST logic and a modern responsive chat interface.
+          </p>
+          <div class="project-tags">
+            <span class="tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tag"><i class="fas fa-flask"></i> Flask</span>
+            <span class="tag"><i class="fas fa-brain"></i> Gemini API</span>
+            <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status status-complete">
+              <span class="status-dot"></span> Completed
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-memory"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/akhan896/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Dynamic Memory Visualizer</h3>
+          <p class="project-desc">
+            Simulates memory allocation and page replacement algorithms (FIFO &amp; LRU) with an
+            interactive GUI to visualize memory frames and track page faults in real time.
+          </p>
+          <div class="project-tags">
+            <span class="tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tag"><i class="fas fa-desktop"></i> Tkinter</span>
+            <span class="tag"><i class="fas fa-sitemap"></i> Data Structures</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status status-complete">
+              <span class="status-dot"></span> Completed
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CERTIFICATIONS ═══════════════ -->
+  <section id="certifications" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// certifications</span>
+        <h2 class="section-title">Credentials</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cert-icon cert-google"><i class="fab fa-google"></i></div>
+          <div class="cert-info">
+            <h4 class="cert-title">Bits &amp; Bytes of Computer Networking</h4>
+            <span class="cert-issuer">Google</span>
+          </div>
+          <i class="fas fa-certificate cert-badge"></i>
+        </div>
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="cert-icon cert-ibm"><i class="fas fa-server"></i></div>
+          <div class="cert-info">
+            <h4 class="cert-title">Introduction to Hardware &amp; Operating Systems</h4>
+            <span class="cert-issuer">IBM</span>
+          </div>
+          <i class="fas fa-certificate cert-badge"></i>
+        </div>
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="cert-icon cert-nptel"><i class="fas fa-shield-halved"></i></div>
+          <div class="cert-info">
+            <h4 class="cert-title">Privacy &amp; Security in Online Social Media</h4>
+            <span class="cert-issuer">NPTEL</span>
+          </div>
+          <i class="fas fa-certificate cert-badge"></i>
+        </div>
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="cert-icon cert-infosys"><i class="fas fa-wand-magic-sparkles"></i></div>
+          <div class="cert-info">
+            <h4 class="cert-title">Build Generative AI Apps with No‑Code Tools</h4>
+            <span class="cert-issuer">Infosys</span>
+          </div>
+          <i class="fas fa-certificate cert-badge"></i>
+        </div>
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="cert-icon cert-udemy"><i class="fas fa-graduation-cap"></i></div>
+          <div class="cert-info">
+            <h4 class="cert-title">Master Generative AI &amp; Generative AI Tools</h4>
+            <span class="cert-issuer">Udemy</span>
+          </div>
+          <i class="fas fa-certificate cert-badge"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ACHIEVEMENTS ═══════════════ -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// achievements</span>
+        <h2 class="section-title">Milestones</h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card glass-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="achievement-rank">Global Rank #9,779</div>
+          <h3 class="achievement-title">Starters 210 – Div 4</h3>
+          <p class="achievement-desc">
+            Secured a global rank of <strong>9,779</strong> out of <strong>20,000+</strong> participants in a competitive programming contest.
+          </p>
+          <span class="achievement-badge badge-cp">Competitive Programming</span>
+        </div>
+        <div class="achievement-card glass-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="achievement-icon icon-gold">
+            <i class="fas fa-medal"></i>
+          </div>
+          <div class="achievement-rank">Top 10 Finalist</div>
+          <h3 class="achievement-title">HackWithVertos 1.0</h3>
+          <p class="achievement-desc">
+            Achieved a <strong>Top 10</strong> position in the HackWithVertos 1.0 Hackathon, competing against talented teams.
+          </p>
+          <span class="achievement-badge badge-hack">Hackathon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EDUCATION ═══════════════ -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div class="timeline-icon"><i class="fas fa-university"></i></div>
+              <div>
+                <h3 class="timeline-title">B.Tech – Computer Science Engineering</h3>
+                <span class="timeline-institution">Lovely Professional University</span>
+              </div>
+            </div>
+            <div class="timeline-meta">
+              <span class="meta-item"><i class="fas fa-calendar"></i> Current</span>
+              <span class="meta-item gpa"><i class="fas fa-star"></i> CGPA: 6.31</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div class="timeline-icon"><i class="fas fa-school"></i></div>
+              <div>
+                <h3 class="timeline-title">Intermediate (Class XII)</h3>
+                <span class="timeline-institution">Army Public School</span>
+              </div>
+            </div>
+            <div class="timeline-meta">
+              <span class="meta-item gpa"><i class="fas fa-star"></i> 72%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div class="timeline-icon"><i class="fas fa-school"></i></div>
+              <div>
+                <h3 class="timeline-title">Matriculation (Class X)</h3>
+                <span class="timeline-institution">Army Public School</span>
+              </div>
+            </div>
+            <div class="timeline-meta">
+              <span class="meta-item gpa"><i class="fas fa-star"></i> 86%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// contact</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have a project in mind? Feel free to reach out!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-card glass-card">
+            <a href="mailto:armankhan02423@gmail.com" class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">armankhan02423@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/arman-khan3/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-item-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">linkedin.com/in/arman-khan3</span>
+              </div>
+            </a>
+            <a href="https://github.com/akhan896/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-item-icon github"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">github.com/akhan896</span>
+              </div>
+            </a>
+          </div>
+          <div class="availability-badge" data-aos="fade-up">
+            <span class="avail-dot"></span>
+            Available for internships &amp; collaborations
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName" class="form-label">Your Name</label>
+              <div class="form-input-wrap">
+                <i class="fas fa-user form-icon"></i>
+                <input type="text" id="contactName" name="name" class="form-input" placeholder="John Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">Email Address</label>
+              <div class="form-input-wrap">
+                <i class="fas fa-envelope form-icon"></i>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject" class="form-label">Subject</label>
+              <div class="form-input-wrap">
+                <i class="fas fa-tag form-icon"></i>
+                <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Project idea…" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">Message</label>
+              <div class="form-input-wrap">
+                <i class="fas fa-comment form-icon icon-top"></i>
+                <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Tell me about your project…" rows="5" required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Building the future, one line at a time.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/akhan896/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/arman-khan3/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:armankhan02423@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Arman Khan. Crafted with <i class="fas fa-heart heart"></i> &amp; lots of ☕</span>
+        <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
