@@ -450,3 +450,28 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+/* ══════════════════════════════════════════════════════
+   18. PROFILE IMAGE ZOOM MODAL
+   ══════════════════════════════════════════════════════ */
+const profile = document.querySelector(".profile-image");
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.querySelector(".close-modal");
+
+if (profile && modal && modalImg && closeBtn) {
+  profile.onclick = () => {
+    modal.style.display = "flex";
+    modalImg.src = profile.src;
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+}
