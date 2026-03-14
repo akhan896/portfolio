@@ -5,13 +5,13 @@
 
 /* ── Design Tokens ── */
 :root {
-  --bg:        #080808;
-  --bg2:       #080808;
-  --bg3:       #0d0d0d;
+  --bg:        #05070f;
+  --bg2:       #05070f;
+  --bg3:       #05070f;
   --card:      rgba(255,255,255,0.04);
   --card-h:    rgba(255,255,255,0.07);
-  --glass-bg:  rgba(14,14,18,0.70);
-  --glass-bdr: rgba(255,255,255,0.09);
+  --glass-bg:  rgba(13,17,23,0.75);
+  --glass-bdr: rgba(255,255,255,0.06);
   --bdr:       rgba(255,255,255,0.09);
   --bdr-h:     rgba(99,102,241,0.45);
 
@@ -34,7 +34,7 @@
   --max:   1140px;
 
   /* Layered shadow system */
-  --sh-card:  0 1px 2px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04) inset;
+  --sh-card:  0 10px 30px rgba(0,0,0,0.5);
   --sh-hover: 0 2px 4px rgba(0,0,0,0.3), 0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(99,102,241,0.3), 0 0 32px rgba(99,102,241,0.08);
   --sh-glow-p: 0 0 18px rgba(99,102,241,0.35), 0 0 48px rgba(99,102,241,0.1);
 }
@@ -130,19 +130,10 @@ body::after{
 /* ── Layout ── */
 .container{max-width:var(--max);margin:0 auto;padding:0 36px;position:relative;z-index:1}
 .section{padding:104px 0}
-/* section-alt uses a transparent glass overlay — NOT a solid bg —
-   so the global starfield remains visible in every section */
+/* Ensure completely transparent section backgrounds so starfield covers everything seamlessly */
 .section-alt{
-  background:rgba(255,255,255,0.018);
+  background:transparent;
   position:relative;
-}
-/* Subtle ambient top beam on alt sections */
-.section-alt::before{
-  content:'';
-  position:absolute;top:0;left:50%;transform:translateX(-50%);
-  width:60%;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(99,102,241,0.3),transparent);
-  pointer-events:none;
 }
 
 /* ── Section headers ── */
@@ -637,20 +628,40 @@ body::after{
 .sbar-top>span:first-child{color:var(--txt);letter-spacing:.01em}
 .sbar-n{
   font-family:'Fira Code',monospace;font-size:.76rem;
-  color:var(--ph);opacity:.85;
+  color:var(--txt2);opacity:.85;
 }
 .sbar-track{
-  height:8px;
-  background:rgba(255,255,255,0.06);
-  border-radius:6px;overflow:hidden;
-  border:1px solid rgba(255,255,255,0.05);
+  height:6px;
+  background:rgba(255,255,255,0.08);
+  border-radius:999px;
+  overflow:hidden;
 }
 .sbar-fill{
-  height:100%;width:0;border-radius:6px;
-  background:linear-gradient(90deg, var(--p), var(--ph));
-  transition:width 1.4s cubic-bezier(.22,1,.36,1);
-  box-shadow:0 0 12px rgba(99,102,241,0.5);
+  height:100%;width:0;border-radius:999px;
+  transition:width 1s ease;
   position:relative;
+}
+
+/* Gradient Classes & Glow */
+.cpp-bar {
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+  box-shadow: 0 0 10px rgba(245,158,11,0.35);
+}
+.cyber-bar {
+  background: linear-gradient(90deg, #ec4899, #f43f5e);
+  box-shadow: 0 0 10px rgba(244,63,94,0.35);
+}
+.html-bar {
+  background: linear-gradient(90deg, #34d399, #10b981);
+  box-shadow: 0 0 10px rgba(16,185,129,0.35);
+}
+.java-bar {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  box-shadow: 0 0 10px rgba(14,165,233,0.35);
+}
+.python-bar {
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  box-shadow: 0 0 10px rgba(99,102,241,0.35);
 }
 /* Animated shimmer on the bar fill */
 .sbar-fill::after{

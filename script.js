@@ -281,13 +281,19 @@ document.querySelectorAll('[data-reveal]').forEach(el => {
    ══════════════════════════════════════════════════════ */
 const barsWrap = document.querySelector('.skill-bars-wrap');
 if (barsWrap) {
-  new IntersectionObserver((entries, obs) => {
-    if (!entries[0].isIntersecting) return;
-    document.querySelectorAll('.sbar-fill').forEach(f => {
-      setTimeout(() => { f.style.width = f.dataset.w + '%'; }, 200);
-    });
-    obs.unobserve(barsWrap);
-  }, { threshold: 0.25 }).observe(barsWrap);
+  new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      document.querySelectorAll('.sbar-fill').forEach((f, i) => {
+        // Stagger the animation so each bar fills one after the other
+        setTimeout(() => { f.style.width = f.dataset.w + '%'; }, 200 + (i * 150));
+      });
+    } else {
+      // Reset to 0 so it animates again every time it enters the viewport
+      document.querySelectorAll('.sbar-fill').forEach(f => {
+        f.style.width = '0%';
+      });
+    }
+  }, { threshold: 0.3 }).observe(barsWrap);
 }
 
 /* ══════════════════════════════════════════════════════
