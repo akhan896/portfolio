@@ -170,6 +170,26 @@ themeToggle.addEventListener('click', () => {
   const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
   applyTheme(next);
   localStorage.setItem('theme', next);
+
+  // Trigger dancing micro-interaction
+  const dancer = document.getElementById('theme-dancer');
+  if (dancer) {
+    dancer.classList.remove('active');
+    // Force reflow
+    void dancer.offsetWidth;
+    dancer.classList.add('active');
+    
+    // Clear previous timeout if any
+    if (dancer.dataset.timeoutId) {
+      clearTimeout(parseInt(dancer.dataset.timeoutId));
+    }
+    
+    const timeoutId = setTimeout(() => {
+      dancer.classList.remove('active');
+    }, 1800); // Fades out after 1.8s
+    
+    dancer.dataset.timeoutId = timeoutId;
+  }
 });
 function applyTheme(t) {
   html.dataset.theme  = t;

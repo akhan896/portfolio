@@ -44,6 +44,8 @@
   <!-- STAR CANVAS -->
   <canvas id="starfield" aria-hidden="true"></canvas>
 
+
+
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#home" class="logo">
@@ -63,6 +65,22 @@
       <div class="nav-end">
         <button id="themeToggle" class="icon-btn" aria-label="toggle theme"><i class="fas fa-moon"
             id="themeIcon"></i></button>
+        <div id="theme-dancer" aria-hidden="true">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- head -->
+            <circle cx="20" cy="10" r="4" fill="currentColor" />
+            <!-- body -->
+            <line x1="20" y1="14" x2="20" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <!-- left arm -->
+            <line id="td-arm-l" x1="20" y1="16" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <!-- right arm -->
+            <line id="td-arm-r" x1="20" y1="16" x2="28" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <!-- left leg -->
+            <line id="td-leg-l" x1="20" y1="24" x2="14" y2="34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <!-- right leg -->
+            <line id="td-leg-r" x1="20" y1="24" x2="26" y2="34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
         <button id="hamburger" class="ham-btn" aria-label="menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -76,7 +94,7 @@
           <span class="name-line">Arman</span>
           <span class="name-line accent-line">Khan</span>
         </h1>
-        <p class="hero-handle">@akhan896 &nbsp;·&nbsp; CSE Student · Developer · Cybersec</p>
+        <p class="hero-subtitle">Cybersecurity &bull; Developer &bull; AI</p>
         <div class="hero-typed-row">
           <span class="typed-prefix">$ whoami →&nbsp;</span>
           <span id="typedText" class="typed-out"></span>
@@ -87,7 +105,7 @@
           one commit, one payload, one breakthrough at a time.
         </p>
         <div class="hero-actions">
-          <a href="#projects" class="btn-cta"><i class="fas fa-rocket"></i> See My Work</a>
+          <a href="#projects" class="btn-cta"><i class="fas fa-arrow-right"></i> View Projects</a>
           <a href="#contact" class="btn-outline-cta"><i class="fas fa-paper-plane"></i> Hire Me</a>
           <a href="#" id="downloadBtn" class="btn-ghost-cta"><i class="fas fa-file-arrow-down"></i> Resume</a>
         </div>
@@ -125,6 +143,17 @@
         </div>
       </div>
     </div>
+    <!-- Floating geometric shapes -->
+    <div class="geo-shapes" aria-hidden="true">
+      <span class="geo geo-1"></span>
+      <span class="geo geo-2"></span>
+      <span class="geo geo-3"></span>
+      <span class="geo geo-4"></span>
+      <span class="geo geo-5"></span>
+      <span class="geo geo-6"></span>
+      <span class="geo geo-7"></span>
+      <span class="geo geo-8"></span>
+    </div>
     <div class="hero-scroll-hint">
       <div class="scroll-line"></div><span>scroll</span>
     </div>
@@ -133,6 +162,7 @@
   <section id="about" class="section">
     <div class="container">
       <div class="sec-head" data-reveal="up">
+        <span class="sec-eyebrow">// 01. About</span>
         <h2 class="sec-title">Who Am I?</h2>
       </div>
       <div class="about-grid">
@@ -173,6 +203,7 @@
   <section id="skills" class="section section-alt">
     <div class="container">
       <div class="sec-head" data-reveal="up">
+        <span class="sec-eyebrow">// 02. Expertise</span>
         <h2 class="sec-title">Skills</h2>
       </div>
       <div class="skills-orbs" data-reveal="up">
@@ -288,6 +319,7 @@
   <section id="projects" class="section">
     <div class="container">
       <div class="sec-head" data-reveal="up">
+        <span class="sec-eyebrow">// 03. Work</span>
         <h2 class="sec-title">Projects</h2>
       </div>
       <div class="proj-grid">
@@ -344,6 +376,7 @@
   <section id="certifications" class="section section-alt">
     <div class="container">
       <div class="sec-head" data-reveal="up">
+        <span class="sec-eyebrow">// 04. Credentials</span>
         <h2 class="sec-title">Certifications</h2>
       </div>
       <div class="cert-ticker-wrap" data-reveal="up">
@@ -425,40 +458,62 @@
       <div class="sec-head" data-reveal="up">
         <h2 class="sec-title">Academic Path</h2>
       </div>
-      <div class="edu-timeline" data-reveal="up">
-        <div class="edu-line"></div>
-        <div class="edu-entry">
-          <div class="edu-dot-wrap">
-            <div class="edu-dot"></div>
+      <div class="edu-zigzag" data-reveal="up">
+        <!-- Centre vertical line -->
+        <div class="ezz-line"></div>
+
+        <!-- Entry 1: RIGHT side -->
+        <div class="ezz-entry ezz-right">
+          <div class="ezz-dot-col">
+            <div class="ezz-dot"></div>
           </div>
-          <div class="edu-card glass">
-            <div class="edu-badge"><i class="fas fa-university"></i> B.Tech</div>
-            <h3>Computer Science Engineering</h3>
-            <div class="edu-meta"><span>Lovely Professional University</span><span class="edu-score">CGPA 6.31</span>
+          <div class="ezz-card-col">
+            <div class="edu-card glass">
+              <div class="edu-badge"><i class="fas fa-university"></i> B.Tech</div>
+              <h3>Computer Science Engineering</h3>
+              <div class="edu-meta">
+                <span>Lovely Professional University</span>
+                <span class="edu-score">CGPA 6.52</span>
+              </div>
+              <div class="edu-period">Current</div>
             </div>
-            <div class="edu-period">Current</div>
           </div>
         </div>
-        <div class="edu-entry">
-          <div class="edu-dot-wrap">
-            <div class="edu-dot"></div>
+
+        <!-- Entry 2: LEFT side -->
+        <div class="ezz-entry ezz-left">
+          <div class="ezz-card-col">
+            <div class="edu-card glass">
+              <div class="edu-badge"><i class="fas fa-school"></i> Intermediate</div>
+              <h3>Class XII</h3>
+              <div class="edu-meta">
+                <span>Army Public School</span>
+                <span class="edu-score">72%</span>
+              </div>
+            </div>
           </div>
-          <div class="edu-card glass">
-            <div class="edu-badge"><i class="fas fa-school"></i> Intermediate</div>
-            <h3>Class XII</h3>
-            <div class="edu-meta"><span>Army Public School</span><span class="edu-score">72%</span></div>
-          </div>
-        </div>
-        <div class="edu-entry">
-          <div class="edu-dot-wrap">
-            <div class="edu-dot"></div>
-          </div>
-          <div class="edu-card glass">
-            <div class="edu-badge"><i class="fas fa-school"></i> Matriculation</div>
-            <h3>Class X</h3>
-            <div class="edu-meta"><span>Army Public School</span><span class="edu-score">86%</span></div>
+          <div class="ezz-dot-col">
+            <div class="ezz-dot"></div>
           </div>
         </div>
+
+        <!-- Entry 3: RIGHT side -->
+        <div class="ezz-entry ezz-right">
+          <div class="ezz-dot-col">
+            <div class="ezz-dot"></div>
+          </div>
+          <div class="ezz-card-col">
+            <div class="edu-card glass">
+              <div class="edu-badge"><i class="fas fa-school"></i> Matriculation</div>
+              <h3>Class X</h3>
+              <div class="edu-meta">
+                <span>Army Public School</span>
+                <span class="edu-score">86%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
