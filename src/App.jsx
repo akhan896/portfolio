@@ -7,6 +7,7 @@ import Certifications from './components/Certifications'
 import Achievements from './components/Achievements'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import CursorTrail from './components/CursorTrail'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <span className="blob-2" />
         <span className="blob-3" />
       </div>
+      <CursorTrail />
       <Navbar />
       <main>
         <Hero />
