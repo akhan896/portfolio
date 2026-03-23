@@ -165,7 +165,7 @@ body::after{
 }
 .sec-sub{
   color:var(--txt2);margin-top:14px;
-  font-size:clamp(16px,1.7vw,19px);
+  font-size:clamp(15px,1.6vw,18px);
   font-weight:400;line-height:1.75;
   max-width:580px;
 }
@@ -685,6 +685,47 @@ body::after{
   100%{left:100%;opacity:0}
 }
 
+/* ══════════ SKILL CATEGORY CARDS ══════════ */
+.skill-cats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-bottom:56px;
+}
+.skill-cat-card{
+  padding:24px;
+  display:flex;flex-direction:column;gap:16px;
+  transition:transform var(--t),border-color var(--t),box-shadow var(--t);
+}
+.skill-cat-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--bdr-h);
+  box-shadow:var(--sh-hover);
+}
+.scc-header{display:flex;align-items:center;gap:12px}
+.scc-icon{
+  width:38px;height:38px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;flex-shrink:0;
+}
+.scc-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:15px;font-weight:700;
+  letter-spacing:-.01em;
+}
+.scc-pills{display:flex;flex-wrap:wrap;gap:7px}
+.spill{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:4px 10px;border-radius:6px;
+  font-size:.73rem;font-weight:600;
+  color:var(--txt2);border:1px solid var(--bdr);
+  background:var(--card);transition:all var(--t);
+}
+.skill-cat-card:hover .spill{
+  border-color:rgba(99,102,241,0.3);
+  color:var(--ph);
+}
+
 /* ══════════ PROJECTS ══════════ */
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
 .proj-card{
@@ -699,6 +740,18 @@ body::after{
   transform:translateY(-9px);
   border-color:rgba(99,102,241,0.45);
   box-shadow:var(--sh-hover);
+}
+/* Featured project card */
+.proj-featured{
+  border-color:rgba(99,102,241,0.22);
+  background:linear-gradient(135deg,rgba(99,102,241,0.05),rgba(13,17,23,0.85));
+}
+.proj-featured-badge{
+  position:absolute;top:18px;right:18px;
+  padding:3px 10px;border-radius:20px;
+  font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(99,102,241,0.15);color:var(--p2);
+  border:1px solid rgba(99,102,241,0.3);
 }
 .proj-glow{
   position:absolute;inset:0;
@@ -941,6 +994,7 @@ body::after{
 }
 
 .contact-form{padding:30px;box-shadow:var(--sh-card)}
+.btn-submit-full{width:100%;justify-content:center;margin-top:4px}
 .fg{margin-bottom:16px}
 .flabel{display:block;font-size:13px;font-weight:600;color:var(--txt2);margin-bottom:6px;letter-spacing:.02em}
 .fi-wrap{position:relative}
@@ -989,6 +1043,7 @@ body::after{
 /* ══════════ RESPONSIVE ══════════ */
 @media(max-width:1024px){
   .hero-card-stack{width:280px}
+  .skill-cats{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:900px){
   .hero-inner   {grid-template-columns:1fr;gap:32px;text-align:center;padding:52px 28px}
@@ -1003,6 +1058,7 @@ body::after{
   .ach-grid     {grid-template-columns:1fr}
   .proj-grid    {grid-template-columns:1fr}
   .cert-cards-grid{grid-template-columns:1fr}
+  .skill-cats   {grid-template-columns:repeat(2,1fr)}
 
   /* zig-zag → reduced gap but still alternates */
   .edu-zigzag{max-width:100%}
@@ -1062,6 +1118,7 @@ body::after{
   .edu-dot-wrap{margin-left:-31px}
   .about-stats{gap:14px}
   .skills-orbs{gap:14px}
+  .skill-cats{grid-template-columns:1fr}
   .orb-ring{width:56px;height:56px}
   .orb{width:40px;height:40px;font-size:1rem}
   .section{padding:52px 0}

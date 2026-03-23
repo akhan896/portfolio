@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Arman Khan — CS student, developer & cybersecurity enthusiast. Portfolio of projects, skills, and achievements." />
-  <title>Arman Khan</title>
+  <title>Arman Khan | Developer & Cybersecurity Enthusiast</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
@@ -21,22 +21,15 @@
   <!-- BIRD CURSOR -->
   <div id="bird-wrap" aria-hidden="true">
     <svg id="bird-svg" viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
-      <!-- body -->
       <ellipse cx="22" cy="18" rx="11" ry="7" fill="#f9c74f" />
-      <!-- tail -->
       <polygon points="11,16 3,12 11,20" fill="#f9c74f" />
-      <!-- head -->
       <circle cx="31" cy="13" r="6" fill="#f9c74f" />
-      <!-- eye -->
       <circle cx="33" cy="12" r="1.5" fill="#111" />
       <circle cx="33.6" cy="11.5" r="0.5" fill="#fff" />
-      <!-- beak -->
       <polygon points="37,13 42,14 37,15" fill="#f77f00" />
-      <!-- wing (animated via class toggle) -->
       <g id="bird-wing">
         <ellipse cx="22" cy="14" rx="9" ry="4" fill="#ffd166" transform="rotate(-10 22 14)" />
       </g>
-      <!-- shadow -->
       <ellipse id="bird-shadow" cx="22" cy="29" rx="9" ry="2" fill="rgba(0,0,0,0.18)" />
     </svg>
   </div>
@@ -44,8 +37,7 @@
   <!-- STAR CANVAS -->
   <canvas id="starfield" aria-hidden="true"></canvas>
 
-
-
+  <!-- ═══ NAVBAR ═══ -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#home" class="logo">
@@ -53,31 +45,24 @@
         <span class="logo-text">arman<span class="logo-dot">.</span>dev</span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nl active">Home</a></li>
-        <li><a href="#about" class="nl">About</a></li>
-        <li><a href="#skills" class="nl">Skills</a></li>
-        <li><a href="#projects" class="nl">Projects</a></li>
+        <li><a href="#home"          class="nl active">Home</a></li>
+        <li><a href="#about"         class="nl">About</a></li>
+        <li><a href="#skills"        class="nl">Skills</a></li>
+        <li><a href="#projects"      class="nl">Projects</a></li>
         <li><a href="#certifications" class="nl">Certs</a></li>
-        <li><a href="#achievements" class="nl">Wins</a></li>
-        <li><a href="#education" class="nl">Education</a></li>
-        <li><a href="#contact" class="nl">Contact</a></li>
+        <li><a href="#achievements"  class="nl">Wins</a></li>
+        <li><a href="#education"     class="nl">Education</a></li>
+        <li><a href="#contact"       class="nl">Contact</a></li>
       </ul>
       <div class="nav-end">
-        <button id="themeToggle" class="icon-btn" aria-label="toggle theme"><i class="fas fa-moon"
-            id="themeIcon"></i></button>
+        <button id="themeToggle" class="icon-btn" aria-label="toggle theme"><i class="fas fa-moon" id="themeIcon"></i></button>
         <div id="theme-dancer" aria-hidden="true">
           <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <!-- head -->
             <circle cx="20" cy="10" r="4" fill="currentColor" />
-            <!-- body -->
             <line x1="20" y1="14" x2="20" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <!-- left arm -->
             <line id="td-arm-l" x1="20" y1="16" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <!-- right arm -->
             <line id="td-arm-r" x1="20" y1="16" x2="28" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <!-- left leg -->
             <line id="td-leg-l" x1="20" y1="24" x2="14" y2="34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <!-- right leg -->
             <line id="td-leg-r" x1="20" y1="24" x2="26" y2="34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
         </div>
@@ -86,6 +71,7 @@
     </div>
   </nav>
 
+  <!-- ═══ HERO ═══ -->
   <section id="home" class="hero">
     <div class="hero-inner">
       <div class="hero-left" data-reveal="left">
@@ -105,17 +91,14 @@
           one commit, one payload, one breakthrough at a time.
         </p>
         <div class="hero-actions">
-          <a href="#projects" class="btn-cta"><i class="fas fa-arrow-right"></i> View Projects</a>
-          <a href="#contact" class="btn-outline-cta"><i class="fas fa-paper-plane"></i> Hire Me</a>
+          <a href="#projects"  class="btn-cta"><i class="fas fa-arrow-right"></i> View Projects</a>
+          <a href="#contact"   class="btn-outline-cta"><i class="fas fa-paper-plane"></i> Hire Me</a>
           <a href="#" id="downloadBtn" class="btn-ghost-cta"><i class="fas fa-file-arrow-down"></i> Resume</a>
         </div>
         <div class="hero-links">
-          <a href="https://github.com/akhan896/" target="_blank" rel="noopener" class="soc-link"><i
-              class="fab fa-github"></i><span>GitHub</span></a>
-          <a href="https://www.linkedin.com/in/arman-khan3/" target="_blank" rel="noopener" class="soc-link"><i
-              class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
-          <a href="mailto:armankhan02423@gmail.com" class="soc-link"><i
-              class="fas fa-envelope"></i><span>Email</span></a>
+          <a href="https://github.com/akhan896/"            target="_blank" rel="noopener" class="soc-link"><i class="fab fa-github"></i><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/arman-khan3/" target="_blank" rel="noopener" class="soc-link"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+          <a href="mailto:armankhan02423@gmail.com"                                         class="soc-link"><i class="fas fa-envelope"></i><span>Email</span></a>
         </div>
       </div>
       <div class="hero-right" data-reveal="right">
@@ -129,8 +112,7 @@
             <div class="hc-val">Cybersecurity · AI · Dev</div>
           </div>
           <div class="hc hc-3">
-            <div class="hc-top"><i class="fab fa-python"></i><i class="fab fa-java"></i><i class="fab fa-linux"></i><i
-                class="fas fa-shield-halved"></i></div>
+            <div class="hc-top"><i class="fab fa-python"></i><i class="fab fa-java"></i><i class="fab fa-linux"></i><i class="fas fa-shield-halved"></i></div>
             <div class="hc-label" style="margin-top:10px">Core Stack</div>
           </div>
           <div class="hc hc-code">
@@ -159,6 +141,7 @@
     </div>
   </section>
 
+  <!-- ═══ ABOUT ═══ -->
   <section id="about" class="section">
     <div class="container">
       <div class="sec-head" data-reveal="up">
@@ -174,12 +157,9 @@
             </div>
           </div>
           <div class="about-stats">
-            <div class="as-item"><span class="as-num" data-count="2">0</span><span class="as-label">Projects</span>
-            </div>
-            <div class="as-item"><span class="as-num" data-count="5">0</span><span
-                class="as-label">Certifications</span></div>
-            <div class="as-item"><span class="as-num" data-count="10">0</span><span class="as-label">Hackathon
-                Rank</span></div>
+            <div class="as-item"><span class="as-num" data-count="2">0</span><span class="as-label">Projects</span></div>
+            <div class="as-item"><span class="as-num" data-count="5">0</span><span class="as-label">Certifications</span></div>
+            <div class="as-item"><span class="as-num" data-count="10">0</span><span class="as-label">Hackathon Rank</span></div>
           </div>
         </div>
         <div class="about-text" data-reveal="right">
@@ -202,137 +182,126 @@
     </div>
   </section>
 
+  <!-- ═══ SKILLS ═══ -->
   <section id="skills" class="section section-alt">
     <div class="container">
       <div class="sec-head" data-reveal="up">
         <span class="sec-eyebrow">// 02. Expertise</span>
         <h2 class="sec-title">Skills</h2>
+        <p class="sec-sub">A comprehensive toolkit spanning languages, security tools, and frameworks.</p>
       </div>
-      <div class="skills-orbs" data-reveal="up">
-        <div class="orb-group" data-delay="0">
-          <div class="orb-ring">
-            <div class="orb orb-purple"><i class="fab fa-python"></i></div>
+
+      <!-- Skill Category Cards (reference-inspired) -->
+      <div class="skill-cats" data-reveal="up">
+        <div class="skill-cat-card glass">
+          <div class="scc-header">
+            <div class="scc-icon" style="background:rgba(99,102,241,.12);color:var(--p)"><i class="fas fa-code"></i></div>
+            <h3 class="scc-title">Languages</h3>
           </div>
-          <span>Python</span>
+          <div class="scc-pills">
+            <span class="spill"><i class="fab fa-python"></i> Python</span>
+            <span class="spill"><i class="fab fa-java"></i> Java</span>
+            <span class="spill"><i class="fas fa-copyright"></i> C / C++</span>
+            <span class="spill"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
         </div>
-        <div class="orb-group" data-delay="60">
-          <div class="orb-ring">
-            <div class="orb orb-blue"><i class="fab fa-java"></i></div>
+        <div class="skill-cat-card glass">
+          <div class="scc-header">
+            <div class="scc-icon" style="background:rgba(244,114,182,.12);color:var(--r)"><i class="fas fa-shield-halved"></i></div>
+            <h3 class="scc-title">Cybersecurity</h3>
           </div>
-          <span>Java</span>
+          <div class="scc-pills">
+            <span class="spill"><i class="fas fa-network-wired"></i> Nmap</span>
+            <span class="spill"><i class="fas fa-fish"></i> Wireshark</span>
+            <span class="spill"><i class="fas fa-bug"></i> Metasploit</span>
+            <span class="spill"><i class="fas fa-lock"></i> Kali Linux</span>
+          </div>
         </div>
-        <div class="orb-group" data-delay="120">
-          <div class="orb-ring">
-            <div class="orb orb-green"><i class="fas fa-code"></i></div>
+        <div class="skill-cat-card glass">
+          <div class="scc-header">
+            <div class="scc-icon" style="background:rgba(52,211,153,.12);color:var(--g)"><i class="fas fa-layer-group"></i></div>
+            <h3 class="scc-title">Web & Frameworks</h3>
           </div>
-          <span>C / C++</span>
+          <div class="scc-pills">
+            <span class="spill"><i class="fab fa-html5"></i> HTML</span>
+            <span class="spill"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="spill"><i class="fas fa-flask"></i> Flask</span>
+            <span class="spill"><i class="fab fa-git-alt"></i> Git</span>
+          </div>
         </div>
-        <div class="orb-group" data-delay="180">
-          <div class="orb-ring">
-            <div class="orb orb-orange"><i class="fab fa-html5"></i></div>
+        <div class="skill-cat-card glass">
+          <div class="scc-header">
+            <div class="scc-icon" style="background:rgba(251,191,36,.12);color:var(--y)"><i class="fas fa-terminal"></i></div>
+            <h3 class="scc-title">Tools & OS</h3>
           </div>
-          <span>HTML</span>
-        </div>
-        <div class="orb-group" data-delay="240">
-          <div class="orb-ring">
-            <div class="orb orb-cyan"><i class="fab fa-css3-alt"></i></div>
+          <div class="scc-pills">
+            <span class="spill"><i class="fab fa-linux"></i> Linux</span>
+            <span class="spill"><i class="fab fa-github"></i> GitHub</span>
+            <span class="spill"><i class="fas fa-brain"></i> AI / ML</span>
+            <span class="spill"><i class="fas fa-database"></i> SQL</span>
           </div>
-          <span>CSS</span>
-        </div>
-        <div class="orb-group" data-delay="300">
-          <div class="orb-ring">
-            <div class="orb orb-yellow"><i class="fab fa-js"></i></div>
-          </div>
-          <span>JavaScript</span>
-        </div>
-        <div class="orb-group" data-delay="360">
-          <div class="orb-ring">
-            <div class="orb orb-red"><i class="fas fa-flask"></i></div>
-          </div>
-          <span>Flask</span>
-        </div>
-        <div class="orb-group" data-delay="60">
-          <div class="orb-ring">
-            <div class="orb orb-gray"><i class="fab fa-linux"></i></div>
-          </div>
-          <span>Linux</span>
-        </div>
-        <div class="orb-group" data-delay="120">
-          <div class="orb-ring">
-            <div class="orb orb-red"><i class="fas fa-network-wired"></i></div>
-          </div>
-          <span>Nmap</span>
-        </div>
-        <div class="orb-group" data-delay="180">
-          <div class="orb-ring">
-            <div class="orb orb-blue"><i class="fas fa-fish"></i></div>
-          </div>
-          <span>Wireshark</span>
-        </div>
-        <div class="orb-group" data-delay="240">
-          <div class="orb-ring">
-            <div class="orb orb-purple"><i class="fab fa-git-alt"></i></div>
-          </div>
-          <span>Git</span>
-        </div>
-        <div class="orb-group" data-delay="300">
-          <div class="orb-ring">
-            <div class="orb orb-gray"><i class="fab fa-github"></i></div>
-          </div>
-          <span>GitHub</span>
         </div>
       </div>
 
+      <!-- Skill Orbs (icon grid) -->
+      <div class="skills-orbs" data-reveal="up">
+        <div class="orb-group" data-delay="0">  <div class="orb-ring"><div class="orb orb-purple"><i class="fab fa-python"></i></div></div><span>Python</span></div>
+        <div class="orb-group" data-delay="60"> <div class="orb-ring"><div class="orb orb-blue"  ><i class="fab fa-java"></i></div></div><span>Java</span></div>
+        <div class="orb-group" data-delay="120"><div class="orb-ring"><div class="orb orb-green" ><i class="fas fa-code"></i></div></div><span>C / C++</span></div>
+        <div class="orb-group" data-delay="180"><div class="orb-ring"><div class="orb orb-orange"><i class="fab fa-html5"></i></div></div><span>HTML</span></div>
+        <div class="orb-group" data-delay="240"><div class="orb-ring"><div class="orb orb-cyan"  ><i class="fab fa-css3-alt"></i></div></div><span>CSS</span></div>
+        <div class="orb-group" data-delay="300"><div class="orb-ring"><div class="orb orb-yellow"><i class="fab fa-js"></i></div></div><span>JavaScript</span></div>
+        <div class="orb-group" data-delay="360"><div class="orb-ring"><div class="orb orb-red"   ><i class="fas fa-flask"></i></div></div><span>Flask</span></div>
+        <div class="orb-group" data-delay="60"> <div class="orb-ring"><div class="orb orb-gray"  ><i class="fab fa-linux"></i></div></div><span>Linux</span></div>
+        <div class="orb-group" data-delay="120"><div class="orb-ring"><div class="orb orb-red"   ><i class="fas fa-network-wired"></i></div></div><span>Nmap</span></div>
+        <div class="orb-group" data-delay="180"><div class="orb-ring"><div class="orb orb-blue"  ><i class="fas fa-fish"></i></div></div><span>Wireshark</span></div>
+        <div class="orb-group" data-delay="240"><div class="orb-ring"><div class="orb orb-purple"><i class="fab fa-git-alt"></i></div></div><span>Git</span></div>
+        <div class="orb-group" data-delay="300"><div class="orb-ring"><div class="orb orb-gray"  ><i class="fab fa-github"></i></div></div><span>GitHub</span></div>
+      </div>
+
+      <!-- Skill Bars -->
       <div class="skill-bars-wrap" data-reveal="up">
         <div class="sbar">
           <div class="sbar-top"><span>C++</span><span class="sbar-n">85%</span></div>
-          <div class="sbar-track">
-            <div class="sbar-fill cpp-bar" data-w="85"></div>
-          </div>
+          <div class="sbar-track"><div class="sbar-fill cpp-bar" data-w="85"></div></div>
         </div>
         <div class="sbar">
           <div class="sbar-top"><span>Cybersecurity Tools</span><span class="sbar-n">75%</span></div>
-          <div class="sbar-track">
-            <div class="sbar-fill cyber-bar" data-w="75"></div>
-          </div>
+          <div class="sbar-track"><div class="sbar-fill cyber-bar" data-w="75"></div></div>
         </div>
         <div class="sbar">
           <div class="sbar-top"><span>HTML / CSS</span><span class="sbar-n">70%</span></div>
-          <div class="sbar-track">
-            <div class="sbar-fill html-bar" data-w="70"></div>
-          </div>
+          <div class="sbar-track"><div class="sbar-fill html-bar" data-w="70"></div></div>
         </div>
         <div class="sbar">
           <div class="sbar-top"><span>Java</span><span class="sbar-n">65%</span></div>
-          <div class="sbar-track">
-            <div class="sbar-fill java-bar" data-w="65"></div>
-          </div>
+          <div class="sbar-track"><div class="sbar-fill java-bar" data-w="65"></div></div>
         </div>
         <div class="sbar">
           <div class="sbar-top"><span>Python</span><span class="sbar-n">50%</span></div>
-          <div class="sbar-track">
-            <div class="sbar-fill python-bar" data-w="50"></div>
-          </div>
+          <div class="sbar-track"><div class="sbar-fill python-bar" data-w="50"></div></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══ PROJECTS ═══ -->
   <section id="projects" class="section">
     <div class="container">
       <div class="sec-head" data-reveal="up">
         <span class="sec-eyebrow">// 03. Work</span>
         <h2 class="sec-title">Projects</h2>
+        <p class="sec-sub">Things I've built, shipped, and obsessed over.</p>
       </div>
       <div class="proj-grid">
 
-        <div class="proj-card" data-reveal="up" data-delay="0">
+        <div class="proj-card proj-featured" data-reveal="up" data-delay="0">
           <div class="proj-glow"></div>
+          <div class="proj-featured-badge">Featured</div>
           <div class="proj-top">
             <div class="proj-icon"><i class="fas fa-robot"></i></div>
             <div class="proj-links-row">
-              <a href="https://github.com/akhan896/" target="_blank" rel="noopener" class="plink" aria-label="GitHub"><i
-                  class="fab fa-github"></i></a>
+              <a href="https://github.com/akhan896/" target="_blank" rel="noopener" class="plink" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" class="plink" aria-label="Live"><i class="fas fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
@@ -348,15 +317,11 @@
         </div>
 
         <div class="proj-card" data-reveal="up" data-delay="150">
-          <div class="proj-glow"
-            style="background:radial-gradient(circle at 30% 30%, rgba(25,199,138,0.18), transparent 70%)"></div>
+          <div class="proj-glow" style="background:radial-gradient(circle at 30% 30%, rgba(25,199,138,0.18), transparent 70%)"></div>
           <div class="proj-top">
-            <div class="proj-icon"
-              style="background:rgba(25,199,138,0.1);color:#19c78a;border-color:rgba(25,199,138,0.3)"><i
-                class="fas fa-memory"></i></div>
+            <div class="proj-icon" style="background:rgba(25,199,138,0.1);color:#19c78a;border-color:rgba(25,199,138,0.3)"><i class="fas fa-memory"></i></div>
             <div class="proj-links-row">
-              <a href="https://github.com/akhan896/" target="_blank" rel="noopener" class="plink" aria-label="GitHub"><i
-                  class="fab fa-github"></i></a>
+              <a href="https://github.com/akhan896/" target="_blank" rel="noopener" class="plink" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <h3 class="proj-name">Dynamic Memory Visualizer</h3>
@@ -366,8 +331,7 @@
             <span>Python</span><span>Tkinter</span><span>Data Structures</span>
           </div>
           <div class="proj-footer">
-            <span class="proj-status" style="color:#19c78a"><span class="pdot"
-                style="background:#19c78a"></span>Completed</span>
+            <span class="proj-status" style="color:#19c78a"><span class="pdot" style="background:#19c78a"></span>Completed</span>
           </div>
         </div>
 
@@ -375,11 +339,13 @@
     </div>
   </section>
 
+  <!-- ═══ CERTIFICATIONS ═══ -->
   <section id="certifications" class="section section-alt">
     <div class="container">
       <div class="sec-head" data-reveal="up">
         <span class="sec-eyebrow">// 04. Credentials</span>
         <h2 class="sec-title">Certifications</h2>
+        <p class="sec-sub">Verified credentials from leading platforms and institutions.</p>
       </div>
       <div class="cert-ticker-wrap" data-reveal="up">
         <div class="cert-cards-grid">
@@ -428,10 +394,13 @@
     </div>
   </section>
 
+  <!-- ═══ ACHIEVEMENTS ═══ -->
   <section id="achievements" class="section">
     <div class="container">
       <div class="sec-head" data-reveal="up">
+        <span class="sec-eyebrow">// 05. Wins</span>
         <h2 class="sec-title">Achievements</h2>
+        <p class="sec-sub">Competing, placing, and proving it in the real world.</p>
       </div>
       <div class="ach-grid">
         <div class="ach-card" data-reveal="left">
@@ -448,27 +417,26 @@
           <div class="ach-rank">Top 10 Finalist</div>
           <h3>HackWithVertos 1.0</h3>
           <p>Finished in the Top 10 at HackWithVertos 1.0, competing against skilled teams across disciplines.</p>
-          <span class="ach-badge"
-            style="background:rgba(245,166,35,0.12);color:#f5a623;border-color:rgba(245,166,35,0.3)">Hackathon</span>
+          <span class="ach-badge" style="background:rgba(245,166,35,0.12);color:#f5a623;border-color:rgba(245,166,35,0.3)">Hackathon</span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══ EDUCATION ═══ -->
   <section id="education" class="section section-alt">
     <div class="container">
       <div class="sec-head" data-reveal="up">
+        <span class="sec-eyebrow">// 06. Journey</span>
         <h2 class="sec-title">Academic Path</h2>
+        <p class="sec-sub">The institutions and milestones that shaped my foundation.</p>
       </div>
       <div class="edu-zigzag" data-reveal="up">
-        <!-- Centre vertical line -->
         <div class="ezz-line"></div>
 
-        <!-- Entry 1: RIGHT side -->
+        <!-- Entry 1: RIGHT -->
         <div class="ezz-entry ezz-right">
-          <div class="ezz-dot-col">
-            <div class="ezz-dot"></div>
-          </div>
+          <div class="ezz-dot-col"><div class="ezz-dot"></div></div>
           <div class="ezz-card-col">
             <div class="edu-card glass">
               <div class="edu-badge"><i class="fas fa-university"></i> B.Tech</div>
@@ -482,7 +450,7 @@
           </div>
         </div>
 
-        <!-- Entry 2: LEFT side -->
+        <!-- Entry 2: LEFT -->
         <div class="ezz-entry ezz-left">
           <div class="ezz-card-col">
             <div class="edu-card glass">
@@ -494,16 +462,12 @@
               </div>
             </div>
           </div>
-          <div class="ezz-dot-col">
-            <div class="ezz-dot"></div>
-          </div>
+          <div class="ezz-dot-col"><div class="ezz-dot"></div></div>
         </div>
 
-        <!-- Entry 3: RIGHT side -->
+        <!-- Entry 3: RIGHT -->
         <div class="ezz-entry ezz-right">
-          <div class="ezz-dot-col">
-            <div class="ezz-dot"></div>
-          </div>
+          <div class="ezz-dot-col"><div class="ezz-dot"></div></div>
           <div class="ezz-card-col">
             <div class="edu-card glass">
               <div class="edu-badge"><i class="fas fa-school"></i> Matriculation</div>
@@ -520,9 +484,11 @@
     </div>
   </section>
 
+  <!-- ═══ CONTACT ═══ -->
   <section id="contact" class="section">
     <div class="container">
       <div class="sec-head" data-reveal="up">
+        <span class="sec-eyebrow">// 07. Contact</span>
         <h2 class="sec-title">Let's Connect</h2>
         <p class="sec-sub">Open to internships, collaborations, and interesting projects.</p>
       </div>
@@ -557,25 +523,21 @@
         <form class="contact-form glass" id="contactForm" data-reveal="right" novalidate>
           <div class="fg">
             <label class="flabel">Name</label>
-            <div class="fi-wrap"><i class="fas fa-user fi"></i><input type="text" id="cName" class="finput"
-                placeholder="John Doe" required /></div>
+            <div class="fi-wrap"><i class="fas fa-user fi"></i><input type="text" id="cName" class="finput" placeholder="John Doe" required /></div>
           </div>
           <div class="fg">
             <label class="flabel">Email</label>
-            <div class="fi-wrap"><i class="fas fa-envelope fi"></i><input type="email" id="cEmail" class="finput"
-                placeholder="john@example.com" required /></div>
+            <div class="fi-wrap"><i class="fas fa-envelope fi"></i><input type="email" id="cEmail" class="finput" placeholder="john@example.com" required /></div>
           </div>
           <div class="fg">
             <label class="flabel">Subject</label>
-            <div class="fi-wrap"><i class="fas fa-tag fi"></i><input type="text" id="cSubject" class="finput"
-                placeholder="Project idea…" /></div>
+            <div class="fi-wrap"><i class="fas fa-tag fi"></i><input type="text" id="cSubject" class="finput" placeholder="Project idea…" /></div>
           </div>
           <div class="fg">
             <label class="flabel">Message</label>
-            <div class="fi-wrap"><i class="fas fa-comment fi fi-top"></i><textarea id="cMsg" class="finput ftextarea"
-                rows="4" placeholder="Tell me more…" required></textarea></div>
+            <div class="fi-wrap"><i class="fas fa-comment fi fi-top"></i><textarea id="cMsg" class="finput ftextarea" rows="4" placeholder="Tell me more…" required></textarea></div>
           </div>
-          <button type="submit" id="submitBtn" class="btn-cta" style="width:100%;justify-content:center">
+          <button type="submit" id="submitBtn" class="btn-cta btn-submit-full">
             <i class="fas fa-paper-plane"></i> Send Message
           </button>
           <div class="form-ok" id="formSuccess">
@@ -591,11 +553,9 @@
       <div class="footer-logo">arman<span class="logo-dot">.</span>dev</div>
       <p class="footer-quote">"Code is the closest thing we have to a superpower."</p>
       <div class="footer-socials">
-        <a href="https://github.com/akhan896/" target="_blank" rel="noopener" class="soc-link"><i
-            class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/arman-khan3/" target="_blank" rel="noopener" class="soc-link"><i
-            class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:armankhan02423@gmail.com" class="soc-link"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/akhan896/"            target="_blank" rel="noopener" class="soc-link"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/arman-khan3/" target="_blank" rel="noopener" class="soc-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:armankhan02423@gmail.com"                                         class="soc-link"><i class="fas fa-envelope"></i></a>
       </div>
       <div class="footer-nav">
         <a href="#home">Home</a><a href="#projects">Projects</a>
