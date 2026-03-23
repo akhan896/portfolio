@@ -40,12 +40,12 @@ img { display: block; max-width: 100%; }
 ::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 2px; }
 ::selection { background: rgba(168,85,247,0.35); }
 
-/* Background blobs */
+/* Background blobs — always behind all content */
 .bg-blobs {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
 }
 .bg-blobs span {
@@ -70,6 +70,12 @@ img { display: block; max-width: 100%; }
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.08;
+}
+
+/* ── Main content above background ── */
+main {
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Container ── */
