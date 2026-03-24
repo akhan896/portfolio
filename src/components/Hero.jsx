@@ -1,6 +1,45 @@
 import { motion } from 'framer-motion'
+import { useEffect } from 'react'
 
 export default function Hero() {
+  useEffect(() => {
+    const roles = ["Cybersecurity", "Developer", "UI Enthusiast", "Gamer"];
+    let i = 0;
+    let j = 0;
+    let currentText = "";
+    let isDeleting = false;
+    let timer;
+
+    function typeEffect() {
+      const current = roles[i];
+
+      if (isDeleting) {
+        currentText = current.substring(0, j--);
+      } else {
+        currentText = current.substring(0, j++);
+      }
+
+      const txtElement = document.getElementById("typed-text");
+      if (txtElement) txtElement.textContent = currentText;
+
+      let speed = isDeleting ? 50 : 100;
+
+      if (!isDeleting && j === current.length) {
+        speed = 1200;
+        isDeleting = true;
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % roles.length;
+        speed = 300;
+      }
+
+      timer = setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section id="home" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: 120 }}>
       <div className="container" style={{
@@ -23,17 +62,8 @@ export default function Hero() {
           <h1 className="section-title" style={{ marginBottom: 12 }}>
             Arman Khan<span style={{ color: 'var(--purple)' }}>.</span>
           </h1>
-          <h2 style={{
-            fontFamily: "'Outfit', sans-serif",
-            fontSize: 'clamp(28px, 3.5vw, 42px)',
-            fontWeight: 800,
-            letterSpacing: '-0.02em',
-            color: 'var(--txt)',
-            marginBottom: 24,
-            display: 'flex',
-            alignItems: 'center'
-          }}>
-            Cybersecurity <span style={{ color: 'var(--txt3)', margin: '0 12px', fontWeight: 400 }}>|</span> Developer
+          <h2 className="typing-text" style={{ marginBottom: 24, display: 'flex', alignItems: 'center' }}>
+            <span id="typed-text"></span><span className="cursor">|</span>
           </h2>
 
           <p className="section-sub" style={{ fontSize: '1.05rem', marginBottom: 40, lineHeight: 1.75 }}>
@@ -102,11 +132,32 @@ export default function Hero() {
       </div>
       <style>{`
         @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+        
+        .typing-text {
+          font-family: 'Outfit', sans-serif;
+          font-size: clamp(28px, 3.5vw, 42px); /* 2rem base scaling */
+          font-weight: 600;
+          color: #d1d5db;
+        }
+
+        .cursor {
+          display: inline-block;
+          margin-left: 5px;
+          animation: blink 1s infinite;
+          color: var(--purple);
+          font-weight: 300;
+        }
+        
+        @keyframes blink {
+          50% { opacity: 0; }
+        }
+
         @media (max-width: 900px) {
           #home > .container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
           #home .btn-primary, #home .btn-outline { margin: 0 auto; }
           #home > .container > div:first-child > div:last-child { justify-content: center; }
           #home .pill { margin: 0 auto 28px; }
+          .typing-text { justify-content: center; }
         }
       `}</style>
     </section>

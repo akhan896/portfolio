@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className="container" style={{ display: 'flex', alignItems: 'center', height: 72, gap: 32 }}>
         {/* Logo */}
         <a href="#home" style={{ fontFamily: "'Outfit',sans-serif", fontSize: '1.35rem', fontWeight: 800, color: 'white', letterSpacing: '-0.02em', flexShrink: 0 }}>
-          arman<span style={{ color: 'var(--purple)' }}>.</span>
+          Arman<span style={{ color: 'var(--purple)' }}>.</span>
         </a>
 
         {/* Desktop links */}
