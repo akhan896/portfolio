@@ -4,36 +4,52 @@ const skillCategories = [
   {
     title: "Frontend & Animation",
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>,
-    skills: ["React.js", "JavaScript", "Tailwind CSS", "HTML5/CSS3", "GSAP"],
+    skills: [
+      { name: "React.js", logo: "react/61DAFB", color: "rgba(97, 218, 251, 0.6)" },
+      { name: "JavaScript", logo: "javascript/F7DF1E", color: "rgba(247, 223, 30, 0.6)" },
+      { name: "Tailwind CSS", logo: "tailwindcss/06B6D4", color: "rgba(6, 182, 212, 0.6)" },
+      { name: "HTML5/CSS3", dual: ["html5/E34F26", "css3/1572B6"], color: "rgba(227, 79, 38, 0.6)" },
+      { name: "GSAP", logo: "greensock/88CE02", color: "rgba(136, 206, 2, 0.6)" }
+    ],
     color: "#a855f7" // purple
   },
   {
     title: "Backend Services",
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>,
-    skills: ["Node.js", "Express.js", "PHP", "REST APIs", "JWT Auth"],
+    skills: [
+      { name: "Node.js", logo: "nodedotjs/339933", color: "rgba(51, 153, 51, 0.6)" },
+      { name: "Express.js", logo: "express/white", color: "rgba(255, 255, 255, 0.6)" },
+      { name: "PHP", logo: "php/777BB4", color: "rgba(119, 123, 180, 0.6)" },
+      { name: "REST APIs", isSvg: true, svg: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>, color: "rgba(255, 255, 255, 0.6)" },
+      { name: "JWT Auth", isSvg: true, svg: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>, color: "rgba(255, 255, 255, 0.6)" }
+    ],
     color: "#3b82f6" // blue
   },
   {
     title: "Databases & Tools",
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>,
-    skills: ["MongoDB", "MySQL", "PostgreSQL", "Git/GitHub", "Vite"],
+    skills: [
+      { name: "MongoDB", logo: "mongodb/47A248", color: "rgba(71, 162, 72, 0.6)" },
+      { name: "MySQL", logo: "mysql/4479A1", color: "rgba(68, 121, 161, 0.6)" },
+      { name: "PostgreSQL", logo: "postgresql/4169E1", color: "rgba(65, 105, 225, 0.6)" },
+      { name: "Git/GitHub", logo: "github/white", color: "rgba(255, 255, 255, 0.6)" },
+      { name: "Vite", logo: "vite/646CFF", color: "rgba(100, 108, 255, 0.6)" }
+    ],
     color: "#22c55e" // green
   },
   {
     title: "Languages & Core",
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
-    skills: ["C/C++", "Java", "Python", "Data Structures", "System Design"],
+    skills: [
+      { name: "C/C++", logo: "cplusplus/00599C", color: "rgba(0, 89, 156, 0.6)" },
+      { name: "Java", isSvg: true, svg: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>, color: "rgba(220, 220, 220, 0.6)" },
+      { name: "Python", logo: "python/3776AB", color: "rgba(55, 118, 171, 0.6)" },
+      { name: "Data Structures", isSvg: true, svg: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><rect x="8" y="2" width="8" height="8" rx="1"/><path d="M12 10v3"/><path d="M12 13H5v3"/><path d="M12 13h7v3"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/></svg>, color: "rgba(255, 255, 255, 0.6)" },
+      { name: "System Design", isSvg: true, svg: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>, color: "rgba(255, 255, 255, 0.6)" }
+    ],
     color: "#f97316" // orange
   }
 ]
-
-// Helper for a generic mini tech icon
-const TechIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" style={{ opacity: 0.7 }}>
-    <polyline points="16 18 22 12 16 6"></polyline>
-    <polyline points="8 6 2 12 8 18"></polyline>
-  </svg>
-)
 
 export default function Skills() {
   return (
@@ -80,9 +96,24 @@ export default function Skills() {
 
               <div className="skill-card__chips">
                 {cat.skills.map(skill => (
-                  <div key={skill} className="tech-chip">
-                    <span className="tech-chip__icon" style={{ color: cat.color }}><TechIcon /></span>
-                    <span className="tech-chip__text">{skill}</span>
+                  <div 
+                    key={skill.name} 
+                    className="tech-chip"
+                    style={{ '--hover-glow': skill.color }}
+                  >
+                    <span className="tech-chip__icon">
+                      {skill.dual ? (
+                        <>
+                          <img src={`https://cdn.simpleicons.org/${skill.dual[0]}`} alt="" width="18" height="18" />
+                          <img src={`https://cdn.simpleicons.org/${skill.dual[1]}`} alt="" width="18" height="18" style={{ marginLeft: 2 }} />
+                        </>
+                      ) : skill.isSvg ? (
+                        skill.svg
+                      ) : (
+                        <img src={`https://cdn.simpleicons.org/${skill.logo}`} alt="" width="18" height="18" />
+                      )}
+                    </span>
+                    <span className="tech-chip__text">{skill.name}</span>
                   </div>
                 ))}
               </div>
@@ -161,7 +192,6 @@ export default function Skills() {
         .tech-chip {
           display: inline-flex;
           align-items: center;
-          gap: 6px;
           padding: 6px 12px;
           border-radius: 999px;
           background: rgba(255, 255, 255, 0.05);
@@ -173,6 +203,8 @@ export default function Skills() {
           display: flex;
           align-items: center;
           justify-content: center;
+          margin-right: 6px;
+          transition: filter 0.3s ease;
         }
         .tech-chip__text {
           font-size: 0.85rem;
@@ -185,6 +217,9 @@ export default function Skills() {
           transform: scale(1.05);
           background: rgba(255, 255, 255, 0.08);
           border-color: rgba(255, 255, 255, 0.15);
+        }
+        .tech-chip:hover .tech-chip__icon {
+          filter: drop-shadow(0 0 8px var(--hover-glow));
         }
         .tech-chip:hover .tech-chip__text {
           color: #ffffff;
