@@ -44,51 +44,14 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right cards/image */}
+        {/* Right image */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          style={{ position: 'relative' }}
+          style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}
         >
-          {/* Framed image placeholder */}
-          <div className="glass-card" style={{
-            position: 'relative',
-            width: '100%',
-            maxWidth: 420,
-            aspectRatio: '4/5',
-            margin: '0 auto',
-            overflow: 'hidden',
-            borderRadius: 24,
-            padding: 8
-          }}>
-            <div style={{
-              width: '100%', height: '100%',
-              borderRadius: 16,
-              background: 'url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800) center/cover',
-              backgroundPosition: 'center',
-              boxShadow: 'inset 0 0 40px rgba(0,0,0,0.8)'
-            }}>
-              {/* Overlay gradient to blend bottom */}
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(3,0,20,0.9) 0%, transparent 40%)' }} />
-            </div>
-
-            {/* Floating tech stack badge */}
-            <div className="glass-card" style={{
-              position: 'absolute',
-              bottom: -20, right: -20,
-              padding: '16px 24px',
-              display: 'flex', flexDirection: 'column', gap: 12,
-              animation: 'float 6s ease-in-out infinite'
-            }}>
-              <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--txt3)', fontWeight: 700 }}>Core Stack</span>
-              <div style={{ display: 'flex', gap: 12 }}>
-                <span style={{ color: '#3776AB' }}><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-3.74.05-1.26.13-1.08.21-.92.27-.77.34-.63.38-.5.43-.4.47-.28.5-.18.52-.08.53-.02h4.99zM13.03 1.6L12 1.58H9.3l-.7.04-.57.1-.47.16-.38.21-.3.26-.23.3-.17.33-.11.36-.07.38-.03.37v2.01h5.81l.3.01.27.04.24.08.21.12.18.17.15.22.12.28.09.35.06.41.04.49.02.58v4.02l-.01.3-.04.28-.06.25-.09.21-.12.18-.15.14-.17.1-.2.06-.23.03-.26.01h-2.1l-.51.01-.48.05-.44.1-.41.16-.38.22-.35.29-.32.36-.29.43-.25.52-.2.6-.16.7-.12.79-.08.89-.04 1-.02 1.1v3.05l.02.66.05.6.09.53.13.46.17.38.22.31.26.24.31.17.36.11.41.06.45.02h4.78l1.01-.06.87-.19.74-.35.61-.49.49-.66.38-.85.27-1.05.16-1.27.06-1.54V11.16L20.89 10l-.13-.53-.2-.45-.25-.38-.3-.31-.34-.23-.37-.16-.39-.1-.41-.05-.42-.02h-8.09v.84h4.37l.02 2.75.03 3.69-.05 1.25-.13 1.09-.22.92-.28.77-.35.63-.4.5-.44.38-.48.27-.51.15-.54.05-.56.02h-5z"/></svg></span>
-                <span style={{ color: '#E34F26' }}><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.743-8.157H8.531z"/></svg></span>
-                <span style={{ color: '#007396' }}><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12m-2.16-5.83V9.851h-2.13v8.32H9.84m3.84 0v-8.32h-2.13v8.32h2.13m4.29-6.37l-2.06 6.37h-2.27l1.76-5.46h-2v-.91h4.57zm-6.07-2v-.93l2.8-.2v1.13h-2.8"/></svg></span>
-              </div>
-            </div>
-          </div>
+          <img src="/images/dp.jpg" alt="Arman Khan" className="hero-image" />
         </motion.div>
       </div>
       <style>{`
@@ -141,11 +104,22 @@ export default function Hero() {
           border-radius: 50%;
         }
 
+        .hero-image {
+          width: 100%;
+          max-width: 350px;
+          height: 350px;
+          object-fit: cover;
+          border-radius: 20px;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+        }
+
         @media (max-width: 900px) {
           #home > .container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
           #home .btn-primary, #home .btn-outline { margin: 0 auto; }
           #home > .container > div:first-child > div:last-child { justify-content: center; }
           .hero-desc { margin: 20px auto 40px auto; }
+          .hero-image { height: 250px; }
         }
       `}</style>
     </section>
