@@ -49,13 +49,13 @@ export default function About() {
             className="about-right-border"
           >
             <div>
-              <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '2.5rem', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1 }}>20+</div>
+              <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '2.5rem', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1 }}>10+</div>
               <div style={{ color: 'var(--txt3)', fontSize: '0.9rem', marginTop: 8 }}>Repositories pushed</div>
             </div>
             
             <div>
-              <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '2.5rem', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1 }}>Top 10</div>
-              <div style={{ color: 'var(--txt3)', fontSize: '0.9rem', marginTop: 8 }}>HackWithVertos</div>
+              <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '2.5rem', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1 }}>Top 68%</div>
+              <div style={{ color: 'var(--txt3)', fontSize: '0.9rem', marginTop: 8 }}>LeetCode</div>
             </div>
 
             <div style={{ display: 'flex', gap: 12, marginTop: 8 }}>
