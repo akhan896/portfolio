@@ -38,8 +38,8 @@ export default function Projects() {
            viewport={{ once: true, margin: '-100px' }}
            transition={{ duration: 0.6 }}
         >
-          <h2>
-            Selected <span style={{ color: 'var(--purple)' }}>Work</span>
+          <h2 className="section-title">
+            Selected <span>Work</span>
           </h2>
           <p>
             Recent projects focusing on full-stack architecture, performance, and user experience.
@@ -521,13 +521,6 @@ export default function Projects() {
           align-items: center;
           justify-content: center;
           flex-direction: column;
-        }
-
-        .section-header h2 {
-          font-family: 'Outfit', sans-serif;
-          font-size: 3rem;
-          font-weight: 700;
-          color: #ffffff;
         }
 
         .section-header p {
