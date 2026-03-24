@@ -8,7 +8,7 @@ const skillCategories = [
       { name: "React.js", logo: "react/61DAFB", color: "rgba(97, 218, 251, 0.6)" },
       { name: "JavaScript", logo: "javascript/F7DF1E", color: "rgba(247, 223, 30, 0.6)" },
       { name: "Tailwind CSS", logo: "tailwindcss/06B6D4", color: "rgba(6, 182, 212, 0.6)" },
-      { name: "HTML5/CSS3", dual: ["html5", "css3"], color: "rgba(227, 79, 38, 0.6)" },
+      { name: "HTML5/CSS3", logo: "html5", color: "rgba(227, 79, 38, 0.6)" },
       { name: "GSAP", logo: "greensock/88CE02", color: "rgba(136, 206, 2, 0.6)" }
     ],
     color: "#a855f7" // purple
@@ -102,15 +102,10 @@ export default function Skills() {
                     style={{ '--hover-glow': skill.color }}
                   >
                     <span className="tech-chip__icon">
-                      {skill.dual ? (
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                          <img src={`https://cdn.simpleicons.org/${skill.dual[0]}`} alt="HTML5" width="18" height="18" style={{ display: 'block' }} />
-                          <img src={`https://cdn.simpleicons.org/${skill.dual[1]}`} alt="CSS3" width="18" height="18" style={{ display: 'block' }} />
-                        </div>
-                      ) : skill.isSvg ? (
+                      {skill.isSvg ? (
                         skill.svg
                       ) : (
-                        <img src={`https://cdn.simpleicons.org/${skill.logo}`} alt="" width="18" height="18" />
+                        <img src={`https://cdn.simpleicons.org/${skill.logo}`} alt={skill.name} width="18" height="18" style={{ display: 'block' }} />
                       )}
                     </span>
                     <span className="tech-chip__text">{skill.name}</span>
