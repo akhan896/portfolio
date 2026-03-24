@@ -1,45 +1,6 @@
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
 
 export default function Hero() {
-  useEffect(() => {
-    const roles = ["Cybersecurity", "Developer", "UI Enthusiast", "Gamer"];
-    let i = 0;
-    let j = 0;
-    let currentText = "";
-    let isDeleting = false;
-    let timer;
-
-    function typeEffect() {
-      const current = roles[i];
-
-      if (isDeleting) {
-        currentText = current.substring(0, j--);
-      } else {
-        currentText = current.substring(0, j++);
-      }
-
-      const txtElement = document.getElementById("typed-text");
-      if (txtElement) txtElement.textContent = currentText;
-
-      let speed = isDeleting ? 50 : 100;
-
-      if (!isDeleting && j === current.length) {
-        speed = 1200;
-        isDeleting = true;
-      } else if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % roles.length;
-        speed = 300;
-      }
-
-      timer = setTimeout(typeEffect, speed);
-    }
-
-    typeEffect();
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section id="home" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: 120 }}>
       <div className="container" style={{
@@ -54,19 +15,19 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <div className="pill" style={{ marginBottom: 28 }}>
-            <span className="pill-dot" />
+          <div className="status-badge">
+            <span className="dot-green"></span>
             Status: Building robust software
           </div>
 
-          <h1 className="section-title" style={{ marginBottom: 12 }}>
-            Arman Khan<span style={{ color: 'var(--purple)' }}>.</span>
+          <h1 className="hero-title">
+            Arman Khan<span className="dot">.</span>
           </h1>
-          <h2 className="typing-text" style={{ marginBottom: 24, display: 'flex', alignItems: 'center' }}>
-            <span id="typed-text"></span><span className="cursor">|</span>
+          <h2 className="hero-subtitle">
+            Cybersecurity | Developer
           </h2>
 
-          <p className="section-sub" style={{ fontSize: '1.05rem', marginBottom: 40, lineHeight: 1.75 }}>
+          <p className="hero-desc">
             I build clean, scalable software and explore the complex world of cybersecurity. <br />
             Focused on robust full-stack architectures, modern UIs, and uncovering vulnerabilities. Based in India.
           </p>
@@ -132,32 +93,59 @@ export default function Hero() {
       </div>
       <style>{`
         @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
-        
-        .typing-text {
+
+        .hero-title {
+          font-size: 3.5rem;
+          font-weight: 800;
+          color: white;
           font-family: 'Outfit', sans-serif;
-          font-size: clamp(28px, 3.5vw, 42px); /* 2rem base scaling */
-          font-weight: 600;
-          color: #d1d5db;
+          line-height: 1.1;
         }
 
-        .cursor {
-          display: inline-block;
-          margin-left: 5px;
-          animation: blink 1s infinite;
-          color: var(--purple);
-          font-weight: 300;
+        .hero-title .dot {
+          color: #a855f7;
         }
-        
-        @keyframes blink {
-          50% { opacity: 0; }
+
+        .hero-subtitle {
+          font-size: 2rem;
+          font-weight: 600;
+          color: #d1d5db;
+          margin-top: 10px;
+          font-family: 'Outfit', sans-serif;
+        }
+
+        .hero-desc {
+          color: #9ca3af;
+          max-width: 500px;
+          line-height: 1.6;
+          margin-top: 20px;
+          margin-bottom: 40px;
+        }
+
+        .status-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: rgba(255,255,255,0.05);
+          padding: 6px 12px;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          color: #9ca3af;
+          margin-bottom: 20px;
+        }
+
+        .dot-green {
+          width: 8px;
+          height: 8px;
+          background: #22c55e;
+          border-radius: 50%;
         }
 
         @media (max-width: 900px) {
           #home > .container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
           #home .btn-primary, #home .btn-outline { margin: 0 auto; }
           #home > .container > div:first-child > div:last-child { justify-content: center; }
-          #home .pill { margin: 0 auto 28px; }
-          .typing-text { justify-content: center; }
+          .hero-desc { margin: 20px auto 40px auto; }
         }
       `}</style>
     </section>
