@@ -32,15 +32,16 @@ export default function Projects() {
     <section id="projects" className="section" style={{ position: 'relative' }}>
       <div className="container">
         <motion.div
+           className="section-header"
            initial={{ opacity: 0, y: 30 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true, margin: '-100px' }}
            transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">
+          <h2>
             Selected <span style={{ color: 'var(--purple)' }}>Work</span>
           </h2>
-          <p className="section-sub" style={{ marginBottom: 60 }}>
+          <p>
             Recent projects focusing on full-stack architecture, performance, and user experience.
           </p>
         </motion.div>
@@ -509,6 +510,30 @@ export default function Projects() {
         .bolt-modal-close:hover {
           background: rgba(100,108,255,0.25);
           box-shadow: 0 0 10px rgba(100,108,255,0.5);
+        }
+
+        /* ── Centered Header ── */
+        .section-header {
+          text-align: center;
+          max-width: 700px;
+          margin: 0 auto 60px auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .section-header h2 {
+          font-family: 'Outfit', sans-serif;
+          font-size: 3rem;
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .section-header p {
+          color: #9aa4b2;
+          margin-top: 10px;
+          font-size: 1.1rem;
         }
       `}</style>
     </section>
