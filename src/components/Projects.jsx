@@ -30,18 +30,17 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section" style={{ position: 'relative' }}>
-      <div className="container">
+      <div className="container" style={{ textAlign: 'center' }}>
         <motion.div
-           className="section-header"
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, margin: '-100px' }}
-           transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
         >
           <h2 className="section-title">
-            Selected <span>Work</span>
+            Selected <span style={{ color: 'var(--purple)' }}>Work</span>
           </h2>
-          <p>
+          <p className="section-sub" style={{ margin: '16px auto 60px' }}>
             Recent projects focusing on full-stack architecture, performance, and user experience.
           </p>
         </motion.div>
@@ -94,7 +93,7 @@ export default function Projects() {
                 </div>
 
                 <a href={proj.github} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '10px 20px' }}>
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" /></svg>
                   Code
                 </a>
               </div>
@@ -122,7 +121,7 @@ export default function Projects() {
                   </div>
                   <div className="bolt-expand-hint">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
-                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
                     </svg>
                     Click to expand
                   </div>
@@ -151,7 +150,7 @@ export default function Projects() {
                   />
                   <div className="dm-expand-hint">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
-                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
                     </svg>
                     Click to expand
                   </div>
@@ -510,23 +509,6 @@ export default function Projects() {
         .bolt-modal-close:hover {
           background: rgba(100,108,255,0.25);
           box-shadow: 0 0 10px rgba(100,108,255,0.5);
-        }
-
-        /* ── Centered Header ── */
-        .section-header {
-          text-align: center;
-          max-width: 700px;
-          margin: 0 auto 60px auto;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-        }
-
-        .section-header p {
-          color: #9aa4b2;
-          margin-top: 10px;
-          font-size: 1.1rem;
         }
       `}</style>
     </section>

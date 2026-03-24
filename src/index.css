@@ -122,8 +122,9 @@ main {
 .section-sub {
   color: var(--txt2);
   font-size: 1.05rem;
-  margin-top: 12px;
-  max-width: 560px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ── Glass card ── */
